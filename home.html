@@ -1,0 +1,34 @@
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Project Harvest</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+
+<nav id="navegacao">
+    <ul>
+        <li><a th:href="@{/}">inicio</a></li>
+        <li><a th:href="@{/turismo}">turismo</a></li>
+        <li><a th:href="@{/eventos}">eventos</a></li>
+        <li><a th:href="@{/login}">login</a></li>
+    </ul>
+</nav>
+
+   <h1 th:text="${message}">Mensagem padrão</h1>
+    <div class="container">
+        <div class="main-content">
+            <div class="caixa">
+                <h1 class="titulo">Título</h1>
+                <h2 class="texto">Texto</h2>
+            </div>
+        </section>
+        </div>
+    </div>
+
+</body>
+</html>

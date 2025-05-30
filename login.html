@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Project Harvest</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+
+<nav id="navegacao">
+    <ul>
+        <li><a th:href="@{/}">inicio</a></li>
+        <li><a th:href="@{/turismo}">turismo</a></li>
+        <li><a th:href="@{/eventos}">eventos</a></li>
+        <li><a th:href="@{/login}">login</a></li>
+    </ul>
+</nav>
+
+    <h1 th:text="${message}">Mensagem padrão</h1>
+    <div class="container">
+        <div class="main-content">
+             <div class="login-container">
+        <form class="login-form">
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" name="usuario" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <div class="buttons">
+                <button type="button" onclick="voltar()">Voltar</button>
+                <button type="submit">Entrar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function voltar() {
+            window.history.back(); // ou window.location.href = "/home";
+        }
+    </script>
+    <li><a th:href="@{/cadastro}">não possui uma conta? Clique aqui</a></li>
+
+</body>
+</html>
